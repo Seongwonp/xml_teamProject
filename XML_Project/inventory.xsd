@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="inventory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="currentDate"/>
+        <xs:sequence maxOccurs="unbounded">
+          <xs:element ref="category"/>
+        </xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="currentDate" type="xs:string"/>
+
+  <xs:element name="category">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="item"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="item">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="name"/>
+        <xs:element ref="manufacturer"/>
+        <xs:element ref="expiryDate"/>
+        <xs:element ref="price"/>
+        <xs:element ref="quantity"/>
+        <xs:element ref="remarks"/>
+        <xs:element ref="image"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="id" type="xs:string"/>
+
+  <xs:element name="name" type="xs:string"/>
+
+  <xs:element name="manufacturer" type="xs:string"/>
+
+  <xs:element name="expiryDate" type="xs:string"/>
+
+  <xs:element name="price" type="xs:string"/>
+
+  <xs:element name="quantity" type="xs:string"/>
+
+  <xs:element name="remarks" type="xs:string"/>
+
+  <xs:element name="image">
+    <xs:complexType>
+      <xs:attribute name="src" type="xs:string" use="required"/>
+      <xs:attribute name="width" type="xs:string"/>
+      <xs:attribute name="height" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

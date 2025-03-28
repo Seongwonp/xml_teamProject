@@ -1,0 +1,2653 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>편의점 재고관리</title>
+    <style>
+          table { 
+            width: 100%;
+            border-collapse: collapse;
+          }
+          th, td { 
+            padding: 8px 12px; 
+            text-align: center; 
+            border: 1px solid #ddd; 
+          }
+          th { background-color: #f2f2f2; }
+          .discount { color: blue; font-weight: bold; }
+          .expiring { color: orange; font-weight: bold; }
+          .normal { color: black; }
+          .discount-price { color: red; font-weight: bold; }
+
+          .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            text-decoration: none;
+            background-color: blue;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+          }
+
+          .button-link:hover {
+            background-color: skyblue;
+          }
+
+          .button-group {
+            text-align: center;
+          }
+
+          .button-group a {
+            margin: 0 15px;
+          }
+
+          .content {
+            display: none;
+          }
+
+          .content:target {
+            display: block;
+          }
+
+          .button {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            text-decoration: none;
+          }
+
+          .button:hover {
+            background-color: gray;
+          }
+
+          .fixed-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 2px 2px 5px grey;
+          }
+          .fixed-button:hover {
+            background-color: #f2f2f2;
+          }
+          
+          .container {
+            display: flex;
+            justify-content: center;
+          }
+
+          .rounded-box {
+            width: 1500px; 
+            height: 150px; 
+            background-color: skyblue; 
+            border-radius: 20px; 
+            color: white; 
+            padding: 20px; 
+            text-align: center; 
+          }
+        </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="rounded-box"><img align="left" src="images/convenience_store.jpg" width="200" height="150"><img align="right" src="images/cart.png" width="200" height="150"><h1 align="center">편의점 재고관리</h1>
+        <div id="home" class="button-group"><a href="#section1" class="button">모든 상품</a><a href="#section2" class="button">카테고리별 상품</a><a href="#section3" class="button">행사 상품</a><a href="#section4" class="button">유통기한 임박</a></div>
+      </div>
+    </div>
+    <div id="section1" class="content">
+      <h1 align="center">모든 상품</h1>
+      <h2>상품 ID 내림차순 정렬</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>상품 ID</th>
+            <th>상품명</th>
+            <th>제조사</th>
+            <th>유통기한</th>
+            <th>카테고리</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>비고</th>
+            <th>이미지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>모카골드 마일드(20)</td>
+            <td>맥심</td>
+            <td>20251118</td>
+            <td>커피</td>
+            <td>4500￦
+                    </td>
+            <td>15</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/coffee_mix.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>카페라떼(마일드)</td>
+            <td>매일유업</td>
+            <td>20250318</td>
+            <td>커피</td>
+            <td>1600￦
+                    </td>
+            <td>40</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/caffeelatte_mild.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>스키니 라떼</td>
+            <td>스타벅스</td>
+            <td>20250211</td>
+            <td>커피</td>
+            <td>2080￦
+                      <span class="discount-price">(할인 20%)</span></td>
+            <td>50</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/starbucks_skini.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>004</td>
+            <td>칸타타 콘트라베이스(콜드블루)</td>
+            <td>롯데칠성음료</td>
+            <td>20250720</td>
+            <td>커피</td>
+            <td>2500￦
+                    </td>
+            <td>80</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/contrabase.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>005</td>
+            <td>카누(아메리카노 10개입)</td>
+            <td>동서</td>
+            <td>20251201</td>
+            <td>커피</td>
+            <td>2480￦
+                      <span class="discount-price">(할인 20%)</span></td>
+            <td>30</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/kanu.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>006</td>
+            <td>바리스타룰스 (마다가스카르 바닐라빈 라떼)</td>
+            <td>매일유업</td>
+            <td>20250125</td>
+            <td>커피</td>
+            <td>2700￦
+                    </td>
+            <td>60</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/barista_rules.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>007</td>
+            <td>T.O.P(스위트 아메리카노)</td>
+            <td>맥심</td>
+            <td>20250812</td>
+            <td>커피</td>
+            <td>2500￦
+                    </td>
+            <td>40</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/top.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>008</td>
+            <td>아카페라 사이즈업(바닐라)</td>
+            <td>빙그레</td>
+            <td>20250110</td>
+            <td>커피</td>
+            <td>2400￦
+                    </td>
+            <td>25</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/size_up_vanilla.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>009</td>
+            <td>프라푸치노(모카)</td>
+            <td>스타벅스</td>
+            <td>20250215</td>
+            <td>커피</td>
+            <td>2900￦
+                    </td>
+            <td>70</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/starbucks_moca.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>010</td>
+            <td>칸타타(카라멜 마끼아또)</td>
+            <td>롯데칠성음료</td>
+            <td>20250130</td>
+            <td>커피</td>
+            <td>2100￦
+                    </td>
+            <td>45</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/cantata_caramel.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>011</td>
+            <td>서울우유(200ml)</td>
+            <td>서울우유</td>
+            <td>20241230</td>
+            <td>유제품</td>
+            <td>1800￦
+                    </td>
+            <td>10</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/seoul_milk_200.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>012</td>
+            <td>초코에몽(250ml)</td>
+            <td>남양</td>
+            <td>20250210</td>
+            <td>유제품</td>
+            <td>1300￦
+                    </td>
+            <td>25</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/chocomong.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>013</td>
+            <td>덴마크 드링킹 요구르트(딸기)</td>
+            <td>동원</td>
+            <td>20241225</td>
+            <td>유제품</td>
+            <td>2400￦
+                    </td>
+            <td>60</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/denmark_drinking_st.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>014</td>
+            <td>바나나맛 우유</td>
+            <td>빙그레</td>
+            <td>20250115</td>
+            <td>유제품</td>
+            <td>1800￦
+                    </td>
+            <td>70</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/bananaMilk.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>015</td>
+            <td>딸기맛 우유</td>
+            <td>빙그레</td>
+            <td>20250110</td>
+            <td>유제품</td>
+            <td>1800￦
+                    </td>
+            <td>50</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/strawberryMilk.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>016</td>
+            <td>매일우유(오리지널 200ml)</td>
+            <td>매일유업</td>
+            <td>20241214</td>
+            <td>유제품</td>
+            <td>2500￦
+                    </td>
+            <td>80</td>
+            <td class="expiring">유통기한 임박</td>
+            <td><img src="images/maeilMilk.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>017</td>
+            <td>허쉬 초콜렛드링크 (오리지널)</td>
+            <td>HERSHEY'S</td>
+            <td>20250102</td>
+            <td>유제품</td>
+            <td>1600￦
+                    </td>
+            <td>100</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/hersheys_original.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>018</td>
+            <td>체다치즈(3매입)</td>
+            <td>서울우유</td>
+            <td>20241216</td>
+            <td>유제품</td>
+            <td>2000￦
+                    </td>
+            <td>5</td>
+            <td class="expiring">유통기한 임박</td>
+            <td><img src="images/chedacheese.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>019</td>
+            <td>비요뜨</td>
+            <td>서울우유</td>
+            <td>20251222</td>
+            <td>유제품</td>
+            <td>1500￦
+                    </td>
+            <td>35</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/Byotte.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>020</td>
+            <td>바이요 드링킹 요거트(블루베리)</td>
+            <td>매일유업</td>
+            <td>20241231</td>
+            <td>유제품</td>
+            <td>2300￦
+                    </td>
+            <td>20</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/bio_blu.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>021</td>
+            <td>혜자로운 집밥(너비아니&amp;닭강정)</td>
+            <td>한국데리카후레쉬</td>
+            <td>20241211</td>
+            <td>즉석식품</td>
+            <td>4900￦
+                    </td>
+            <td>3</td>
+            <td class="expiring">유통기한 임박</td>
+            <td><img src="images/jibbab_porkbelly.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>022</td>
+            <td>햇반컵반(스펨마요덮밥)</td>
+            <td>CJ제일제당</td>
+            <td>20251117</td>
+            <td>즉석식품</td>
+            <td>4500￦
+                    </td>
+            <td>20</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/spamrice.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>023</td>
+            <td>한입쏙쏙미트볼</td>
+            <td>오뚜기</td>
+            <td>20250612</td>
+            <td>즉석식품</td>
+            <td>2500￦
+                    </td>
+            <td>30</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/mitball.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>024</td>
+            <td>숯불구이맛후랑크2</td>
+            <td>대림선</td>
+            <td>20250608</td>
+            <td>즉석식품</td>
+            <td>1900￦
+                    </td>
+            <td>130</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/derim_frank.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>025</td>
+            <td>참치마요 삼각김밥</td>
+            <td>푸드렐라</td>
+            <td>20241213</td>
+            <td>즉석식품</td>
+            <td>1000￦
+                    </td>
+            <td>5</td>
+            <td class="expiring">유통기한 임박</td>
+            <td><img src="images/tunamayo_trianglekim.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>026</td>
+            <td>스펨마요김밥</td>
+            <td>CJ제일제당</td>
+            <td>20241125</td>
+            <td>즉석식품</td>
+            <td>3500￦
+                    </td>
+            <td>4</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/spemmayo_kim.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>027</td>
+            <td>매콤닭강정</td>
+            <td>하림</td>
+            <td>20250105</td>
+            <td>즉석식품</td>
+            <td>4800￦
+                      <span class="discount-price">(할인 20%)</span></td>
+            <td>20</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/harim_spicy_sauce_chicken.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>028</td>
+            <td>자이언트 떡볶이</td>
+            <td>BGF리테일</td>
+            <td>20250110</td>
+            <td>즉석식품</td>
+            <td>2200￦
+                    </td>
+            <td>5</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/Giant_Tteokbokki.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>029</td>
+            <td>오뎅한그릇</td>
+            <td>CJ제일제당</td>
+            <td>20250210</td>
+            <td>즉석식품</td>
+            <td>3000￦
+                    </td>
+            <td>10</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/fishcake_soup.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>030</td>
+            <td>옛날 진한쇠고기 미역국밥</td>
+            <td>오뚜기</td>
+            <td>20250401</td>
+            <td>즉석식품</td>
+            <td>4800￦
+                    </td>
+            <td>50</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/oddugi_seaweed_soup.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>031</td>
+            <td>육개장 사발면</td>
+            <td>농심</td>
+            <td>20250830</td>
+            <td>라면</td>
+            <td>1000￦
+                    </td>
+            <td>150</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/spicybeefsoup_ramyeon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>032</td>
+            <td>김치 사발면</td>
+            <td>농심</td>
+            <td>20250505</td>
+            <td>라면</td>
+            <td>1000￦
+                    </td>
+            <td>120</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/kimchi_ramyeon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>033</td>
+            <td>불닭볶음면(큰컵)</td>
+            <td>농심</td>
+            <td>20241210</td>
+            <td>라면</td>
+            <td>1500￦
+                    </td>
+            <td>100</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/fire_noodle.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>034</td>
+            <td>왕뚜껑</td>
+            <td>팔도</td>
+            <td>20250620</td>
+            <td>라면</td>
+            <td>1500￦
+                    </td>
+            <td>200</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/king_ramyeon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>035</td>
+            <td>참깨라면</td>
+            <td>오뚜기</td>
+            <td>20250212</td>
+            <td>라면</td>
+            <td>1700￦
+                    </td>
+            <td>180</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/sesameoil_ramyeon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>036</td>
+            <td>짜파게티</td>
+            <td>농심</td>
+            <td>20250210</td>
+            <td>라면</td>
+            <td>1400￦
+                    </td>
+            <td>160</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/jjapagetti.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>037</td>
+            <td>신라면블랙(두부김치)</td>
+            <td>농심</td>
+            <td>20250315</td>
+            <td>라면</td>
+            <td>1800￦
+                    </td>
+            <td>150</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/shinramyeonblack_tufukimchi.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>038</td>
+            <td>진라면(매운맛)</td>
+            <td>오뚜기</td>
+            <td>20250401</td>
+            <td>라면</td>
+            <td>1300￦
+                    </td>
+            <td>150</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/jinramen_spicy.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>039</td>
+            <td>비빔면</td>
+            <td>팔도</td>
+            <td>20250601</td>
+            <td>라면</td>
+            <td>1400￦
+                    </td>
+            <td>170</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/bibimmyeon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>040</td>
+            <td>짜파구리</td>
+            <td>오뚜기</td>
+            <td>20250315</td>
+            <td>라면</td>
+            <td>1600￦
+                    </td>
+            <td>90</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/jjapaguri.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>041</td>
+            <td>가나밀크초콜릿</td>
+            <td>롯데</td>
+            <td>20250320</td>
+            <td>스낵</td>
+            <td>2000￦
+                    </td>
+            <td>30</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/gana_chocolate.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>042</td>
+            <td>스윙칩</td>
+            <td>오리온</td>
+            <td>20251117</td>
+            <td>스낵</td>
+            <td>1700￦
+                    </td>
+            <td>80</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/swing_chips.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>043</td>
+            <td>빼뺴로(아몬드)</td>
+            <td>롯데</td>
+            <td>20251017</td>
+            <td>스낵</td>
+            <td>1700￦
+                    </td>
+            <td>200</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/bbebbero.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>044</td>
+            <td>콘초</td>
+            <td>크라운</td>
+            <td>20250819</td>
+            <td>스낵</td>
+            <td>1500￦
+                    </td>
+            <td>80</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/concho.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>045</td>
+            <td>프링글스(사워크림)</td>
+            <td>켈라노바</td>
+            <td>20251230</td>
+            <td>스낵</td>
+            <td>3700￦
+                    </td>
+            <td>100</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/pringles.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>046</td>
+            <td>콘칩</td>
+            <td>크라운</td>
+            <td>20250917</td>
+            <td>스낵</td>
+            <td>1500￦
+                    </td>
+            <td>97</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/con_chips.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>047</td>
+            <td>포카칩</td>
+            <td>오리온</td>
+            <td>20250717</td>
+            <td>스낵</td>
+            <td>1700￦
+                    </td>
+            <td>80</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/poca_chips.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>048</td>
+            <td>치토스(매콤달콤)</td>
+            <td>롯데</td>
+            <td>20250930</td>
+            <td>스낵</td>
+            <td>1500￦
+                    </td>
+            <td>120</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/cheetos.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>049</td>
+            <td>오징어땅콩</td>
+            <td>해태</td>
+            <td>20250715</td>
+            <td>스낵</td>
+            <td>1500￦
+                    </td>
+            <td>150</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/squid_peanut.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>050</td>
+            <td>허니버터칩</td>
+            <td>해태</td>
+            <td>20251125</td>
+            <td>스낵</td>
+            <td>1800￦
+                    </td>
+            <td>200</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/honeybutter.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>051</td>
+            <td>코카콜라(오리지널)</td>
+            <td>코카콜라</td>
+            <td>20251130</td>
+            <td>음료</td>
+            <td>1600￦
+                    </td>
+            <td>100</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/coke.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>052</td>
+            <td>칠성사이다</td>
+            <td>롯데칠성</td>
+            <td>20251110</td>
+            <td>음료</td>
+            <td>1500￦
+                    </td>
+            <td>120</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/chilsung_cider.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>053</td>
+            <td>펩시(제로라임)355ml</td>
+            <td>롯데칠성</td>
+            <td>20250820</td>
+            <td>음료</td>
+            <td>1900￦
+                    </td>
+            <td>150</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/pepsi_zero.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>054</td>
+            <td>보성홍차아이스티(복숭아)</td>
+            <td>동원</td>
+            <td>20250401</td>
+            <td>음료</td>
+            <td>2200￦
+                    </td>
+            <td>130</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/Boseong_BlackTea(Peach).jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>055</td>
+            <td>보성말차</td>
+            <td>동원</td>
+            <td>20251111</td>
+            <td>음료</td>
+            <td>1000￦
+                    </td>
+            <td>132</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/Boseong_greentea.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>056</td>
+            <td>A'live</td>
+            <td>덴마크</td>
+            <td>20250410</td>
+            <td>음료</td>
+            <td>2500￦
+                    </td>
+            <td>150</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/alive_mango.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>057</td>
+            <td>티즐(피치우롱티)</td>
+            <td>웅진</td>
+            <td>20250601</td>
+            <td>음료</td>
+            <td>2000￦
+                    </td>
+            <td>200</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/teazle_peach.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>058</td>
+            <td>밀키스</td>
+            <td>롯데칠성</td>
+            <td>20250614</td>
+            <td>음료</td>
+            <td>1500￦
+                    </td>
+            <td>180</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/milkis.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>059</td>
+            <td>환타(오렌지)</td>
+            <td>코카콜라</td>
+            <td>20250625</td>
+            <td>음료</td>
+            <td>1600￦
+                    </td>
+            <td>110</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/fanta_orange.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>060</td>
+            <td>파워에이드</td>
+            <td>코카콜라</td>
+            <td>20251210</td>
+            <td>음료</td>
+            <td>2200￦
+                    </td>
+            <td>120</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/powerade.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>061</td>
+            <td>부라보콘</td>
+            <td>해태제과</td>
+            <td>20250630</td>
+            <td>아이스크림</td>
+            <td>2000￦
+                    </td>
+            <td>20</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/burabocorn.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>062</td>
+            <td>월드콘</td>
+            <td>롯데</td>
+            <td>20250715</td>
+            <td>아이스크림</td>
+            <td>2000￦
+                    </td>
+            <td>22</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/worldcone.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>063</td>
+            <td>돼지바</td>
+            <td>롯데</td>
+            <td>20250405</td>
+            <td>아이스크림</td>
+            <td>1500￦
+                    </td>
+            <td>50</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/pigbar.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>064</td>
+            <td>메로나</td>
+            <td>빙그레</td>
+            <td>20250610</td>
+            <td>아이스크림</td>
+            <td>1500￦
+                    </td>
+            <td>40</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/merona.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>065</td>
+            <td>비비빅</td>
+            <td>롯데</td>
+            <td>20250930</td>
+            <td>아이스크림</td>
+            <td>1500￦
+                    </td>
+            <td>30</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/bibibik.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>066</td>
+            <td>투게더</td>
+            <td>빙그레</td>
+            <td>20250815</td>
+            <td>아이스크림</td>
+            <td>5600￦
+                      <span class="discount-price">(할인 20%)</span></td>
+            <td>10</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/together.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>067</td>
+            <td>쌍쌍바</td>
+            <td>롯데</td>
+            <td>20251010</td>
+            <td>아이스크림</td>
+            <td>1500￦
+                    </td>
+            <td>60</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/ssangssangba.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>068</td>
+            <td>티코</td>
+            <td>롯데</td>
+            <td>20251130</td>
+            <td>아이스크림</td>
+            <td>5500￦
+                    </td>
+            <td>10</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/tico.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>069</td>
+            <td>엑설런트</td>
+            <td>빙그레</td>
+            <td>20251201</td>
+            <td>아이스크림</td>
+            <td>7200￦
+                      <span class="discount-price">(할인 20%)</span></td>
+            <td>15</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/excellent.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>070</td>
+            <td>빠삐코</td>
+            <td>롯데</td>
+            <td>20250701</td>
+            <td>아이스크림</td>
+            <td>1800￦
+                    </td>
+            <td>70</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/bbabbico.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>071</td>
+            <td>친환경종이컵10P</td>
+            <td>HEYROO</td>
+            <td>-</td>
+            <td>일회용품</td>
+            <td>700￦
+                    </td>
+            <td>100</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/paper_cup.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>072</td>
+            <td>일회용 나무젓가락</td>
+            <td>크린랲</td>
+            <td>-</td>
+            <td>일회용품</td>
+            <td>1200￦
+                    </td>
+            <td>30</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/disposable_chopsticks.jpeg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>073</td>
+            <td>친환경종이소주컵10P</td>
+            <td>HEYROO</td>
+            <td>-</td>
+            <td>일회용품</td>
+            <td>400￦
+                    </td>
+            <td>100</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/paper_sojucup.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>074</td>
+            <td>일회용수저</td>
+            <td>크린랲</td>
+            <td>-</td>
+            <td>일회용품</td>
+            <td>1000￦
+                    </td>
+            <td>20</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/disposable_spoon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>075</td>
+            <td>친환경종이접시10P</td>
+            <td>HEYROO</td>
+            <td>-</td>
+            <td>일회용품</td>
+            <td>2500￦
+                    </td>
+            <td>33</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/disposable_plate.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="section2" class="content">
+      <h1 align="center">카테고리별 상품</h1>
+      <p align="center">카테고리를 선택하시오.</p>
+      <div class="button-group"><a href="#1" class="button">커피</a><a href="#2" class="button">유제품</a><a href="#3" class="button">즉석식품</a><a href="#4" class="button">라면</a><a href="#5" class="button">스낵</a><a href="#6" class="button">음료</a><a href="#7" class="button">아이스크림</a><a href="#8" class="button">일회용품</a></div>
+    </div>
+    <div id="1" class="content">
+      <h2> ● 커피</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>상품 ID</th>
+            <th>상품명</th>
+            <th>제조사</th>
+            <th>유통기한</th>
+            <th>카테고리</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>비고</th>
+            <th>이미지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>모카골드 마일드(20)</td>
+            <td>맥심</td>
+            <td>20251118</td>
+            <td>커피</td>
+            <td>4500￦
+                  </td>
+            <td>15</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/coffee_mix.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>카페라떼(마일드)</td>
+            <td>매일유업</td>
+            <td>20250318</td>
+            <td>커피</td>
+            <td>1600￦
+                  </td>
+            <td>40</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/caffeelatte_mild.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>스키니 라떼</td>
+            <td>스타벅스</td>
+            <td>20250211</td>
+            <td>커피</td>
+            <td>2080￦
+                    <span class="discount-price">(할인 20%)</span></td>
+            <td>50</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/starbucks_skini.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>004</td>
+            <td>칸타타 콘트라베이스(콜드블루)</td>
+            <td>롯데칠성음료</td>
+            <td>20250720</td>
+            <td>커피</td>
+            <td>2500￦
+                  </td>
+            <td>80</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/contrabase.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>005</td>
+            <td>카누(아메리카노 10개입)</td>
+            <td>동서</td>
+            <td>20251201</td>
+            <td>커피</td>
+            <td>2480￦
+                    <span class="discount-price">(할인 20%)</span></td>
+            <td>30</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/kanu.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>006</td>
+            <td>바리스타룰스 (마다가스카르 바닐라빈 라떼)</td>
+            <td>매일유업</td>
+            <td>20250125</td>
+            <td>커피</td>
+            <td>2700￦
+                  </td>
+            <td>60</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/barista_rules.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>007</td>
+            <td>T.O.P(스위트 아메리카노)</td>
+            <td>맥심</td>
+            <td>20250812</td>
+            <td>커피</td>
+            <td>2500￦
+                  </td>
+            <td>40</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/top.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>008</td>
+            <td>아카페라 사이즈업(바닐라)</td>
+            <td>빙그레</td>
+            <td>20250110</td>
+            <td>커피</td>
+            <td>2400￦
+                  </td>
+            <td>25</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/size_up_vanilla.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>009</td>
+            <td>프라푸치노(모카)</td>
+            <td>스타벅스</td>
+            <td>20250215</td>
+            <td>커피</td>
+            <td>2900￦
+                  </td>
+            <td>70</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/starbucks_moca.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>010</td>
+            <td>칸타타(카라멜 마끼아또)</td>
+            <td>롯데칠성음료</td>
+            <td>20250130</td>
+            <td>커피</td>
+            <td>2100￦
+                  </td>
+            <td>45</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/cantata_caramel.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="2" class="content">
+      <h2> ● 유제품</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>상품 ID</th>
+            <th>상품명</th>
+            <th>제조사</th>
+            <th>유통기한</th>
+            <th>카테고리</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>비고</th>
+            <th>이미지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>011</td>
+            <td>서울우유(200ml)</td>
+            <td>서울우유</td>
+            <td>20241230</td>
+            <td>유제품</td>
+            <td>1800￦
+                  </td>
+            <td>10</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/seoul_milk_200.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>012</td>
+            <td>초코에몽(250ml)</td>
+            <td>남양</td>
+            <td>20250210</td>
+            <td>유제품</td>
+            <td>1300￦
+                  </td>
+            <td>25</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/chocomong.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>013</td>
+            <td>덴마크 드링킹 요구르트(딸기)</td>
+            <td>동원</td>
+            <td>20241225</td>
+            <td>유제품</td>
+            <td>2400￦
+                  </td>
+            <td>60</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/denmark_drinking_st.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>014</td>
+            <td>바나나맛 우유</td>
+            <td>빙그레</td>
+            <td>20250115</td>
+            <td>유제품</td>
+            <td>1800￦
+                  </td>
+            <td>70</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/bananaMilk.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>015</td>
+            <td>딸기맛 우유</td>
+            <td>빙그레</td>
+            <td>20250110</td>
+            <td>유제품</td>
+            <td>1800￦
+                  </td>
+            <td>50</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/strawberryMilk.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>016</td>
+            <td>매일우유(오리지널 200ml)</td>
+            <td>매일유업</td>
+            <td>20241214</td>
+            <td>유제품</td>
+            <td>2500￦
+                  </td>
+            <td>80</td>
+            <td class="expiring">유통기한 임박</td>
+            <td><img src="images/maeilMilk.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>017</td>
+            <td>허쉬 초콜렛드링크 (오리지널)</td>
+            <td>HERSHEY'S</td>
+            <td>20250102</td>
+            <td>유제품</td>
+            <td>1600￦
+                  </td>
+            <td>100</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/hersheys_original.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>018</td>
+            <td>체다치즈(3매입)</td>
+            <td>서울우유</td>
+            <td>20241216</td>
+            <td>유제품</td>
+            <td>2000￦
+                  </td>
+            <td>5</td>
+            <td class="expiring">유통기한 임박</td>
+            <td><img src="images/chedacheese.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>019</td>
+            <td>비요뜨</td>
+            <td>서울우유</td>
+            <td>20251222</td>
+            <td>유제품</td>
+            <td>1500￦
+                  </td>
+            <td>35</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/Byotte.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>020</td>
+            <td>바이요 드링킹 요거트(블루베리)</td>
+            <td>매일유업</td>
+            <td>20241231</td>
+            <td>유제품</td>
+            <td>2300￦
+                  </td>
+            <td>20</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/bio_blu.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="3" class="content">
+      <h2> ● 즉석식품</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>상품 ID</th>
+            <th>상품명</th>
+            <th>제조사</th>
+            <th>유통기한</th>
+            <th>카테고리</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>비고</th>
+            <th>이미지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>021</td>
+            <td>혜자로운 집밥(너비아니&amp;닭강정)</td>
+            <td>한국데리카후레쉬</td>
+            <td>20241211</td>
+            <td>즉석식품</td>
+            <td>4900￦
+                  </td>
+            <td>3</td>
+            <td class="expiring">유통기한 임박</td>
+            <td><img src="images/jibbab_porkbelly.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>022</td>
+            <td>햇반컵반(스펨마요덮밥)</td>
+            <td>CJ제일제당</td>
+            <td>20251117</td>
+            <td>즉석식품</td>
+            <td>4500￦
+                  </td>
+            <td>20</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/spamrice.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>023</td>
+            <td>한입쏙쏙미트볼</td>
+            <td>오뚜기</td>
+            <td>20250612</td>
+            <td>즉석식품</td>
+            <td>2500￦
+                  </td>
+            <td>30</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/mitball.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>024</td>
+            <td>숯불구이맛후랑크2</td>
+            <td>대림선</td>
+            <td>20250608</td>
+            <td>즉석식품</td>
+            <td>1900￦
+                  </td>
+            <td>130</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/derim_frank.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>025</td>
+            <td>참치마요 삼각김밥</td>
+            <td>푸드렐라</td>
+            <td>20241213</td>
+            <td>즉석식품</td>
+            <td>1000￦
+                  </td>
+            <td>5</td>
+            <td class="expiring">유통기한 임박</td>
+            <td><img src="images/tunamayo_trianglekim.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>026</td>
+            <td>스펨마요김밥</td>
+            <td>CJ제일제당</td>
+            <td>20241125</td>
+            <td>즉석식품</td>
+            <td>3500￦
+                  </td>
+            <td>4</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/spemmayo_kim.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>027</td>
+            <td>매콤닭강정</td>
+            <td>하림</td>
+            <td>20250105</td>
+            <td>즉석식품</td>
+            <td>4800￦
+                    <span class="discount-price">(할인 20%)</span></td>
+            <td>20</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/harim_spicy_sauce_chicken.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>028</td>
+            <td>자이언트 떡볶이</td>
+            <td>BGF리테일</td>
+            <td>20250110</td>
+            <td>즉석식품</td>
+            <td>2200￦
+                  </td>
+            <td>5</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/Giant_Tteokbokki.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>029</td>
+            <td>오뎅한그릇</td>
+            <td>CJ제일제당</td>
+            <td>20250210</td>
+            <td>즉석식품</td>
+            <td>3000￦
+                  </td>
+            <td>10</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/fishcake_soup.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>030</td>
+            <td>옛날 진한쇠고기 미역국밥</td>
+            <td>오뚜기</td>
+            <td>20250401</td>
+            <td>즉석식품</td>
+            <td>4800￦
+                  </td>
+            <td>50</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/oddugi_seaweed_soup.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="4" class="content">
+      <h2> ● 라면</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>상품 ID</th>
+            <th>상품명</th>
+            <th>제조사</th>
+            <th>유통기한</th>
+            <th>카테고리</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>비고</th>
+            <th>이미지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>031</td>
+            <td>육개장 사발면</td>
+            <td>농심</td>
+            <td>20250830</td>
+            <td>라면</td>
+            <td>1000￦
+                  </td>
+            <td>150</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/spicybeefsoup_ramyeon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>032</td>
+            <td>김치 사발면</td>
+            <td>농심</td>
+            <td>20250505</td>
+            <td>라면</td>
+            <td>1000￦
+                  </td>
+            <td>120</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/kimchi_ramyeon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>033</td>
+            <td>불닭볶음면(큰컵)</td>
+            <td>농심</td>
+            <td>20241210</td>
+            <td>라면</td>
+            <td>1500￦
+                  </td>
+            <td>100</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/fire_noodle.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>034</td>
+            <td>왕뚜껑</td>
+            <td>팔도</td>
+            <td>20250620</td>
+            <td>라면</td>
+            <td>1500￦
+                  </td>
+            <td>200</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/king_ramyeon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>035</td>
+            <td>참깨라면</td>
+            <td>오뚜기</td>
+            <td>20250212</td>
+            <td>라면</td>
+            <td>1700￦
+                  </td>
+            <td>180</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/sesameoil_ramyeon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>036</td>
+            <td>짜파게티</td>
+            <td>농심</td>
+            <td>20250210</td>
+            <td>라면</td>
+            <td>1400￦
+                  </td>
+            <td>160</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/jjapagetti.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>037</td>
+            <td>신라면블랙(두부김치)</td>
+            <td>농심</td>
+            <td>20250315</td>
+            <td>라면</td>
+            <td>1800￦
+                  </td>
+            <td>150</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/shinramyeonblack_tufukimchi.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>038</td>
+            <td>진라면(매운맛)</td>
+            <td>오뚜기</td>
+            <td>20250401</td>
+            <td>라면</td>
+            <td>1300￦
+                  </td>
+            <td>150</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/jinramen_spicy.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>039</td>
+            <td>비빔면</td>
+            <td>팔도</td>
+            <td>20250601</td>
+            <td>라면</td>
+            <td>1400￦
+                  </td>
+            <td>170</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/bibimmyeon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>040</td>
+            <td>짜파구리</td>
+            <td>오뚜기</td>
+            <td>20250315</td>
+            <td>라면</td>
+            <td>1600￦
+                  </td>
+            <td>90</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/jjapaguri.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="5" class="content">
+      <h2> ● 스낵</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>상품 ID</th>
+            <th>상품명</th>
+            <th>제조사</th>
+            <th>유통기한</th>
+            <th>카테고리</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>비고</th>
+            <th>이미지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>041</td>
+            <td>가나밀크초콜릿</td>
+            <td>롯데</td>
+            <td>20250320</td>
+            <td>스낵</td>
+            <td>2000￦
+                  </td>
+            <td>30</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/gana_chocolate.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>042</td>
+            <td>스윙칩</td>
+            <td>오리온</td>
+            <td>20251117</td>
+            <td>스낵</td>
+            <td>1700￦
+                  </td>
+            <td>80</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/swing_chips.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>043</td>
+            <td>빼뺴로(아몬드)</td>
+            <td>롯데</td>
+            <td>20251017</td>
+            <td>스낵</td>
+            <td>1700￦
+                  </td>
+            <td>200</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/bbebbero.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>044</td>
+            <td>콘초</td>
+            <td>크라운</td>
+            <td>20250819</td>
+            <td>스낵</td>
+            <td>1500￦
+                  </td>
+            <td>80</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/concho.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>045</td>
+            <td>프링글스(사워크림)</td>
+            <td>켈라노바</td>
+            <td>20251230</td>
+            <td>스낵</td>
+            <td>3700￦
+                  </td>
+            <td>100</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/pringles.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>046</td>
+            <td>콘칩</td>
+            <td>크라운</td>
+            <td>20250917</td>
+            <td>스낵</td>
+            <td>1500￦
+                  </td>
+            <td>97</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/con_chips.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>047</td>
+            <td>포카칩</td>
+            <td>오리온</td>
+            <td>20250717</td>
+            <td>스낵</td>
+            <td>1700￦
+                  </td>
+            <td>80</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/poca_chips.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>048</td>
+            <td>치토스(매콤달콤)</td>
+            <td>롯데</td>
+            <td>20250930</td>
+            <td>스낵</td>
+            <td>1500￦
+                  </td>
+            <td>120</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/cheetos.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>049</td>
+            <td>오징어땅콩</td>
+            <td>해태</td>
+            <td>20250715</td>
+            <td>스낵</td>
+            <td>1500￦
+                  </td>
+            <td>150</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/squid_peanut.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>050</td>
+            <td>허니버터칩</td>
+            <td>해태</td>
+            <td>20251125</td>
+            <td>스낵</td>
+            <td>1800￦
+                  </td>
+            <td>200</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/honeybutter.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="6" class="content">
+      <h4> ● 음료</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>상품 ID</th>
+            <th>상품명</th>
+            <th>제조사</th>
+            <th>유통기한</th>
+            <th>카테고리</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>비고</th>
+            <th>이미지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>051</td>
+            <td>코카콜라(오리지널)</td>
+            <td>코카콜라</td>
+            <td>20251130</td>
+            <td>음료</td>
+            <td>1600￦
+                  </td>
+            <td>100</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/coke.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>052</td>
+            <td>칠성사이다</td>
+            <td>롯데칠성</td>
+            <td>20251110</td>
+            <td>음료</td>
+            <td>1500￦
+                  </td>
+            <td>120</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/chilsung_cider.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>053</td>
+            <td>펩시(제로라임)355ml</td>
+            <td>롯데칠성</td>
+            <td>20250820</td>
+            <td>음료</td>
+            <td>1900￦
+                  </td>
+            <td>150</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/pepsi_zero.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>054</td>
+            <td>보성홍차아이스티(복숭아)</td>
+            <td>동원</td>
+            <td>20250401</td>
+            <td>음료</td>
+            <td>2200￦
+                  </td>
+            <td>130</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/Boseong_BlackTea(Peach).jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>055</td>
+            <td>보성말차</td>
+            <td>동원</td>
+            <td>20251111</td>
+            <td>음료</td>
+            <td>1000￦
+                  </td>
+            <td>132</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/Boseong_greentea.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>056</td>
+            <td>A'live</td>
+            <td>덴마크</td>
+            <td>20250410</td>
+            <td>음료</td>
+            <td>2500￦
+                  </td>
+            <td>150</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/alive_mango.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>057</td>
+            <td>티즐(피치우롱티)</td>
+            <td>웅진</td>
+            <td>20250601</td>
+            <td>음료</td>
+            <td>2000￦
+                  </td>
+            <td>200</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/teazle_peach.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>058</td>
+            <td>밀키스</td>
+            <td>롯데칠성</td>
+            <td>20250614</td>
+            <td>음료</td>
+            <td>1500￦
+                  </td>
+            <td>180</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/milkis.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>059</td>
+            <td>환타(오렌지)</td>
+            <td>코카콜라</td>
+            <td>20250625</td>
+            <td>음료</td>
+            <td>1600￦
+                  </td>
+            <td>110</td>
+            <td class="normal">2+1</td>
+            <td><img src="images/fanta_orange.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>060</td>
+            <td>파워에이드</td>
+            <td>코카콜라</td>
+            <td>20251210</td>
+            <td>음료</td>
+            <td>2200￦
+                  </td>
+            <td>120</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/powerade.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="7" class="content">
+      <h2> ● 아이스크림</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>상품 ID</th>
+            <th>상품명</th>
+            <th>제조사</th>
+            <th>유통기한</th>
+            <th>카테고리</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>비고</th>
+            <th>이미지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>061</td>
+            <td>부라보콘</td>
+            <td>해태제과</td>
+            <td>20250630</td>
+            <td>아이스크림</td>
+            <td>2000￦
+                  </td>
+            <td>20</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/burabocorn.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>062</td>
+            <td>월드콘</td>
+            <td>롯데</td>
+            <td>20250715</td>
+            <td>아이스크림</td>
+            <td>2000￦
+                  </td>
+            <td>22</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/worldcone.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>063</td>
+            <td>돼지바</td>
+            <td>롯데</td>
+            <td>20250405</td>
+            <td>아이스크림</td>
+            <td>1500￦
+                  </td>
+            <td>50</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/pigbar.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>064</td>
+            <td>메로나</td>
+            <td>빙그레</td>
+            <td>20250610</td>
+            <td>아이스크림</td>
+            <td>1500￦
+                  </td>
+            <td>40</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/merona.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>065</td>
+            <td>비비빅</td>
+            <td>롯데</td>
+            <td>20250930</td>
+            <td>아이스크림</td>
+            <td>1500￦
+                  </td>
+            <td>30</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/bibibik.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>066</td>
+            <td>투게더</td>
+            <td>빙그레</td>
+            <td>20250815</td>
+            <td>아이스크림</td>
+            <td>5600￦
+                    <span class="discount-price">(할인 20%)</span></td>
+            <td>10</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/together.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>067</td>
+            <td>쌍쌍바</td>
+            <td>롯데</td>
+            <td>20251010</td>
+            <td>아이스크림</td>
+            <td>1500￦
+                  </td>
+            <td>60</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/ssangssangba.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>068</td>
+            <td>티코</td>
+            <td>롯데</td>
+            <td>20251130</td>
+            <td>아이스크림</td>
+            <td>5500￦
+                  </td>
+            <td>10</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/tico.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>069</td>
+            <td>엑설런트</td>
+            <td>빙그레</td>
+            <td>20251201</td>
+            <td>아이스크림</td>
+            <td>7200￦
+                    <span class="discount-price">(할인 20%)</span></td>
+            <td>15</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/excellent.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>070</td>
+            <td>빠삐코</td>
+            <td>롯데</td>
+            <td>20250701</td>
+            <td>아이스크림</td>
+            <td>1800￦
+                  </td>
+            <td>70</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/bbabbico.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="8" class="content">
+      <h2> ● 일회용품</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>상품 ID</th>
+            <th>상품명</th>
+            <th>제조사</th>
+            <th>유통기한</th>
+            <th>카테고리</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>비고</th>
+            <th>이미지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>071</td>
+            <td>친환경종이컵10P</td>
+            <td>HEYROO</td>
+            <td>-</td>
+            <td>일회용품</td>
+            <td>700￦
+                  </td>
+            <td>100</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/paper_cup.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>072</td>
+            <td>일회용 나무젓가락</td>
+            <td>크린랲</td>
+            <td>-</td>
+            <td>일회용품</td>
+            <td>1200￦
+                  </td>
+            <td>30</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/disposable_chopsticks.jpeg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>073</td>
+            <td>친환경종이소주컵10P</td>
+            <td>HEYROO</td>
+            <td>-</td>
+            <td>일회용품</td>
+            <td>400￦
+                  </td>
+            <td>100</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/paper_sojucup.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>074</td>
+            <td>일회용수저</td>
+            <td>크린랲</td>
+            <td>-</td>
+            <td>일회용품</td>
+            <td>1000￦
+                  </td>
+            <td>20</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/disposable_spoon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>075</td>
+            <td>친환경종이접시10P</td>
+            <td>HEYROO</td>
+            <td>-</td>
+            <td>일회용품</td>
+            <td>2500￦
+                  </td>
+            <td>33</td>
+            <td class="normal">
+            </td>
+            <td><img src="images/disposable_plate.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="section3" class="content">
+      <h1 align="center">행사 상품</h1>
+      <div id="category_button" class="button-group"><a href="#dis" class="button">할인중 상품</a><a href="#1plus1" class="button">1+1 상품</a><a href="#2plus1" class="button">2+1 상품</a></div>
+    </div>
+    <div id="dis" class="content">
+      <h2 align="center">할인중 상품</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>상품 ID</th>
+            <th>상품명</th>
+            <th>제조사</th>
+            <th>유통기한</th>
+            <th>카테고리</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>비고</th>
+            <th>이미지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>003</td>
+            <td>스키니 라떼</td>
+            <td>스타벅스</td>
+            <td>20250211</td>
+            <td>커피</td>
+            <td>2080￦
+                      <span class="discount-price">(할인 20%)</span></td>
+            <td>50</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/starbucks_skini.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>005</td>
+            <td>카누(아메리카노 10개입)</td>
+            <td>동서</td>
+            <td>20251201</td>
+            <td>커피</td>
+            <td>2480￦
+                      <span class="discount-price">(할인 20%)</span></td>
+            <td>30</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/kanu.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>027</td>
+            <td>매콤닭강정</td>
+            <td>하림</td>
+            <td>20250105</td>
+            <td>즉석식품</td>
+            <td>4800￦
+                      <span class="discount-price">(할인 20%)</span></td>
+            <td>20</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/harim_spicy_sauce_chicken.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>066</td>
+            <td>투게더</td>
+            <td>빙그레</td>
+            <td>20250815</td>
+            <td>아이스크림</td>
+            <td>5600￦
+                      <span class="discount-price">(할인 20%)</span></td>
+            <td>10</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/together.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>069</td>
+            <td>엑설런트</td>
+            <td>빙그레</td>
+            <td>20251201</td>
+            <td>아이스크림</td>
+            <td>7200￦
+                      <span class="discount-price">(할인 20%)</span></td>
+            <td>15</td>
+            <td class="discount">할인중</td>
+            <td><img src="images/excellent.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="center"><a href="#section3">이전으로</a></p>
+    </div>
+    <div id="1plus1" class="content">
+      <h2 align="center">1+1 상품</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>상품 ID</th>
+            <th>상품명</th>
+            <th>제조사</th>
+            <th>유통기한</th>
+            <th>카테고리</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>비고</th>
+            <th>이미지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>008</td>
+            <td>아카페라 사이즈업(바닐라)</td>
+            <td>빙그레</td>
+            <td>20250110</td>
+            <td>커피</td>
+            <td>2400￦
+                    </td>
+            <td>25</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/size_up_vanilla.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>017</td>
+            <td>허쉬 초콜렛드링크 (오리지널)</td>
+            <td>HERSHEY'S</td>
+            <td>20250102</td>
+            <td>유제품</td>
+            <td>1600￦
+                    </td>
+            <td>100</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/hersheys_original.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>030</td>
+            <td>옛날 진한쇠고기 미역국밥</td>
+            <td>오뚜기</td>
+            <td>20250401</td>
+            <td>즉석식품</td>
+            <td>4800￦
+                    </td>
+            <td>50</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/oddugi_seaweed_soup.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>035</td>
+            <td>참깨라면</td>
+            <td>오뚜기</td>
+            <td>20250212</td>
+            <td>라면</td>
+            <td>1700￦
+                    </td>
+            <td>180</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/sesameoil_ramyeon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>045</td>
+            <td>프링글스(사워크림)</td>
+            <td>켈라노바</td>
+            <td>20251230</td>
+            <td>스낵</td>
+            <td>3700￦
+                    </td>
+            <td>100</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/pringles.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>051</td>
+            <td>코카콜라(오리지널)</td>
+            <td>코카콜라</td>
+            <td>20251130</td>
+            <td>음료</td>
+            <td>1600￦
+                    </td>
+            <td>100</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/coke.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>053</td>
+            <td>펩시(제로라임)355ml</td>
+            <td>롯데칠성</td>
+            <td>20250820</td>
+            <td>음료</td>
+            <td>1900￦
+                    </td>
+            <td>150</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/pepsi_zero.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>054</td>
+            <td>보성홍차아이스티(복숭아)</td>
+            <td>동원</td>
+            <td>20250401</td>
+            <td>음료</td>
+            <td>2200￦
+                    </td>
+            <td>130</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/Boseong_BlackTea(Peach).jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>056</td>
+            <td>A'live</td>
+            <td>덴마크</td>
+            <td>20250410</td>
+            <td>음료</td>
+            <td>2500￦
+                    </td>
+            <td>150</td>
+            <td class="normal">1+1</td>
+            <td><img src="images/alive_mango.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="center"><a href="#section3">이전으로</a></p>
+    </div>
+    <div id="2plus1" class="content">
+      <h2 align="center">2+1상품</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>상품 ID</th>
+            <th>상품명</th>
+            <th>제조사</th>
+            <th>유통기한</th>
+            <th>카테고리</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>비고</th>
+            <th>이미지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>002</td>
+            <td>카페라떼(마일드)</td>
+            <td>매일유업</td>
+            <td>20250318</td>
+            <td>커피</td>
+            <td>1600￦</td>
+            <td>40</td>
+            <td>2+1</td>
+            <td><img src="images/caffeelatte_mild.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>006</td>
+            <td>바리스타룰스 (마다가스카르 바닐라빈 라떼)</td>
+            <td>매일유업</td>
+            <td>20250125</td>
+            <td>커피</td>
+            <td>2700￦</td>
+            <td>60</td>
+            <td>2+1</td>
+            <td><img src="images/barista_rules.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>012</td>
+            <td>초코에몽(250ml)</td>
+            <td>남양</td>
+            <td>20250210</td>
+            <td>유제품</td>
+            <td>1300￦</td>
+            <td>25</td>
+            <td>2+1</td>
+            <td><img src="images/chocomong.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>019</td>
+            <td>비요뜨</td>
+            <td>서울우유</td>
+            <td>20251222</td>
+            <td>유제품</td>
+            <td>1500￦</td>
+            <td>35</td>
+            <td>2+1</td>
+            <td><img src="images/Byotte.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>022</td>
+            <td>햇반컵반(스펨마요덮밥)</td>
+            <td>CJ제일제당</td>
+            <td>20251117</td>
+            <td>즉석식품</td>
+            <td>4500￦</td>
+            <td>20</td>
+            <td>2+1</td>
+            <td><img src="images/spamrice.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>024</td>
+            <td>숯불구이맛후랑크2</td>
+            <td>대림선</td>
+            <td>20250608</td>
+            <td>즉석식품</td>
+            <td>1900￦</td>
+            <td>130</td>
+            <td>2+1</td>
+            <td><img src="images/derim_frank.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>034</td>
+            <td>왕뚜껑</td>
+            <td>팔도</td>
+            <td>20250620</td>
+            <td>라면</td>
+            <td>1500￦</td>
+            <td>200</td>
+            <td>2+1</td>
+            <td><img src="images/king_ramyeon.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>037</td>
+            <td>신라면블랙(두부김치)</td>
+            <td>농심</td>
+            <td>20250315</td>
+            <td>라면</td>
+            <td>1800￦</td>
+            <td>150</td>
+            <td>2+1</td>
+            <td><img src="images/shinramyeonblack_tufukimchi.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>041</td>
+            <td>가나밀크초콜릿</td>
+            <td>롯데</td>
+            <td>20250320</td>
+            <td>스낵</td>
+            <td>2000￦</td>
+            <td>30</td>
+            <td>2+1</td>
+            <td><img src="images/gana_chocolate.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>043</td>
+            <td>빼뺴로(아몬드)</td>
+            <td>롯데</td>
+            <td>20251017</td>
+            <td>스낵</td>
+            <td>1700￦</td>
+            <td>200</td>
+            <td>2+1</td>
+            <td><img src="images/bbebbero.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>044</td>
+            <td>콘초</td>
+            <td>크라운</td>
+            <td>20250819</td>
+            <td>스낵</td>
+            <td>1500￦</td>
+            <td>80</td>
+            <td>2+1</td>
+            <td><img src="images/concho.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>048</td>
+            <td>치토스(매콤달콤)</td>
+            <td>롯데</td>
+            <td>20250930</td>
+            <td>스낵</td>
+            <td>1500￦</td>
+            <td>120</td>
+            <td>2+1</td>
+            <td><img src="images/cheetos.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>050</td>
+            <td>허니버터칩</td>
+            <td>해태</td>
+            <td>20251125</td>
+            <td>스낵</td>
+            <td>1800￦</td>
+            <td>200</td>
+            <td>2+1</td>
+            <td><img src="images/honeybutter.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>055</td>
+            <td>보성말차</td>
+            <td>동원</td>
+            <td>20251111</td>
+            <td>음료</td>
+            <td>1000￦</td>
+            <td>132</td>
+            <td>2+1</td>
+            <td><img src="images/Boseong_greentea.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>057</td>
+            <td>티즐(피치우롱티)</td>
+            <td>웅진</td>
+            <td>20250601</td>
+            <td>음료</td>
+            <td>2000￦</td>
+            <td>200</td>
+            <td>2+1</td>
+            <td><img src="images/teazle_peach.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+          <tr>
+            <td>059</td>
+            <td>환타(오렌지)</td>
+            <td>코카콜라</td>
+            <td>20250625</td>
+            <td>음료</td>
+            <td>1600￦</td>
+            <td>110</td>
+            <td>2+1</td>
+            <td><img src="images/fanta_orange.jpg" width="100" height="100" alt="상품 이미지"></td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="center"><a href="#section3">이전으로</a></p>
+    </div>
+    <div id="section4" class="content">
+      <h1 align="center">유통기한 임박 상품</h1>
+      <p>
+        <table>
+          <thead>
+            <tr>
+              <th>상품 ID</th>
+              <th>상품명</th>
+              <th>제조사</th>
+              <th>유통기한</th>
+              <th>카테고리</th>
+              <th>가격</th>
+              <th>수량</th>
+              <th>비고</th>
+              <th>이미지</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>016</td>
+              <td>매일우유(오리지널 200ml)</td>
+              <td>매일유업</td>
+              <td>20241214</td>
+              <td>유제품</td>
+              <td>2500￦
+						  </td>
+              <td>80</td>
+              <td class="expiring">유통기한 임박 (4일 남음)</td>
+              <td><img src="images/maeilMilk.jpg" width="100" height="100" alt="상품 이미지"></td>
+            </tr>
+            <tr>
+              <td>018</td>
+              <td>체다치즈(3매입)</td>
+              <td>서울우유</td>
+              <td>20241216</td>
+              <td>유제품</td>
+              <td>2000￦
+						  </td>
+              <td>5</td>
+              <td class="expiring">유통기한 임박 (6일 남음)</td>
+              <td><img src="images/chedacheese.jpg" width="100" height="100" alt="상품 이미지"></td>
+            </tr>
+            <tr>
+              <td>021</td>
+              <td>혜자로운 집밥(너비아니&amp;닭강정)</td>
+              <td>한국데리카후레쉬</td>
+              <td>20241211</td>
+              <td>즉석식품</td>
+              <td>4900￦
+						  </td>
+              <td>3</td>
+              <td class="expiring">유통기한 임박 (1일 남음)</td>
+              <td><img src="images/jibbab_porkbelly.jpg" width="100" height="100" alt="상품 이미지"></td>
+            </tr>
+            <tr>
+              <td>025</td>
+              <td>참치마요 삼각김밥</td>
+              <td>푸드렐라</td>
+              <td>20241213</td>
+              <td>즉석식품</td>
+              <td>1000￦
+						  </td>
+              <td>5</td>
+              <td class="expiring">유통기한 임박 (3일 남음)</td>
+              <td><img src="images/tunamayo_trianglekim.jpg" width="100" height="100" alt="상품 이미지"></td>
+            </tr>
+          </tbody>
+        </table><a href="#section4">처음으로</a></p>
+    </div><a href="#home" class="fixed-button">목록 닫기</a></body>
+</html>

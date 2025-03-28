@@ -1,0 +1,816 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="inventory_2.xsl"?>
+<inventory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="inventory.xsd">
+  <currentDate>20241210</currentDate>
+  <!-- 커피 카테고리 -->
+  <category id="1" name="커피">
+    <item>
+      <id>001</id>
+      <name>모카골드 마일드(20)</name>
+      <manufacturer>맥심</manufacturer>
+      <expiryDate>20251118</expiryDate>
+      <price>4500</price>
+      <quantity>15</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/coffee_mix.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>002</id>
+      <name>카페라떼(마일드)</name>
+      <manufacturer>매일유업</manufacturer>
+      <expiryDate>20250318</expiryDate>
+      <price>1600</price>
+      <quantity>40</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/caffeelatte_mild.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>003</id>
+      <name>스키니 라떼</name>
+      <manufacturer>스타벅스</manufacturer>
+      <expiryDate>20250211</expiryDate>
+      <price>2600</price>
+      <quantity>50</quantity>
+      <remarks>할인중</remarks>
+      <image src="images/starbucks_skini.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>004</id>
+      <name>칸타타 콘트라베이스(콜드블루)</name>
+      <manufacturer>롯데칠성음료</manufacturer>
+      <expiryDate>20250720</expiryDate>
+      <price>2500</price>
+      <quantity>80</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/contrabase.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>005</id>
+      <name>카누(아메리카노 10개입)</name>
+      <manufacturer>동서</manufacturer>
+      <expiryDate>20251201</expiryDate>
+      <price>3100</price>
+      <quantity>30</quantity>
+      <remarks>할인중</remarks>
+      <image src="images/kanu.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>006</id>
+      <name>바리스타룰스 (마다가스카르 바닐라빈 라떼)</name>
+      <manufacturer>매일유업</manufacturer>
+      <expiryDate>20250125</expiryDate>
+      <price>2700</price>
+      <quantity>60</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/barista_rules.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>007</id>
+      <name>T.O.P(스위트 아메리카노)</name>
+      <manufacturer>맥심</manufacturer>
+      <expiryDate>20250812</expiryDate>
+      <price>2500</price>
+      <quantity>40</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/top.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>008</id>
+      <name>아카페라 사이즈업(바닐라)</name>
+      <manufacturer>빙그레</manufacturer>
+      <expiryDate>20250110</expiryDate>
+      <price>2400</price>
+      <quantity>25</quantity>
+      <remarks>1+1</remarks>
+      <image src="images/size_up_vanilla.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>009</id>
+      <name>프라푸치노(모카)</name>
+      <manufacturer>스타벅스</manufacturer>
+      <expiryDate>20250215</expiryDate>
+      <price>2900</price>
+      <quantity>70</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/starbucks_moca.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>010</id>
+      <name>칸타타(카라멜 마끼아또)</name>
+      <manufacturer>롯데칠성음료</manufacturer>
+      <expiryDate>20250130</expiryDate>
+      <price>2100</price>
+      <quantity>45</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/cantata_caramel.jpg" width="100" height="100" />
+    </item>
+  </category>
+  <!-- 유제품 카테고리 -->
+  <category id="2" name="유제품">
+    <item>
+      <id>011</id>
+      <name>서울우유(200ml)</name>
+      <manufacturer>서울우유</manufacturer>
+      <expiryDate>20241230</expiryDate>
+      <price>1800</price>
+      <quantity>10</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/seoul_milk_200.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>012</id>
+      <name>초코에몽(250ml)</name>
+      <manufacturer>남양</manufacturer>
+      <expiryDate>20250210</expiryDate>
+      <price>1300</price>
+      <quantity>25</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/chocomong.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>013</id>
+      <name>덴마크 드링킹 요구르트(딸기)</name>
+      <manufacturer>동원</manufacturer>
+      <expiryDate>20241225</expiryDate>
+      <price>2400</price>
+      <quantity>60</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/denmark_drinking_st.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>014</id>
+      <name>바나나맛 우유</name>
+      <manufacturer>빙그레</manufacturer>
+      <expiryDate>20250115</expiryDate>
+      <price>1800</price>
+      <quantity>70</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/bananaMilk.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>015</id>
+      <name>딸기맛 우유</name>
+      <manufacturer>빙그레</manufacturer>
+      <expiryDate>20250110</expiryDate>
+      <price>1800</price>
+      <quantity>50</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/strawberryMilk.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>016</id>
+      <name>매일우유(오리지널 200ml)</name>
+      <manufacturer>매일유업</manufacturer>
+      <expiryDate>20241214</expiryDate>
+      <price>2500</price>
+      <quantity>80</quantity>
+      <remarks>유통기한 임박</remarks>
+      <image src="images/maeilMilk.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>017</id>
+      <name>허쉬 초콜렛드링크 (오리지널)</name>
+      <manufacturer>HERSHEY'S</manufacturer>
+      <expiryDate>20250102</expiryDate>
+      <price>1600</price>
+      <quantity>100</quantity>
+      <remarks>1+1</remarks>
+      <image src="images/hersheys_original.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>018</id>
+      <name>체다치즈(3매입)</name>
+      <manufacturer>서울우유</manufacturer>
+      <expiryDate>20241216</expiryDate>
+      <price>2000</price>
+      <quantity>5</quantity>
+      <remarks>유통기한 임박</remarks>
+      <image src="images/chedacheese.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>019</id>
+      <name>비요뜨</name>
+      <manufacturer>서울우유</manufacturer>
+      <expiryDate>20251222</expiryDate>
+      <price>1500</price>
+      <quantity>35</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/Byotte.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>020</id>
+      <name>바이요 드링킹 요거트(블루베리)</name>
+      <manufacturer>매일유업</manufacturer>
+      <expiryDate>20241231</expiryDate>
+      <price>2300</price>
+      <quantity>20</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/bio_blu.jpg" width="100" height="100" />
+    </item>
+  </category>
+  <!-- 즉석식품 카테고리 -->
+  <category id="3" name="즉석식품">
+    <item>
+      <id>021</id>
+      <name>혜자로운 집밥(너비아니&amp;닭강정)</name>
+      <manufacturer>한국데리카후레쉬</manufacturer>
+      <expiryDate>20241211</expiryDate>
+      <price>4900</price>
+      <quantity>3</quantity>
+      <remarks>유통기한 임박</remarks>
+      <image src="images/jibbab_porkbelly.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>022</id>
+      <name>햇반컵반(스펨마요덮밥)</name>
+      <manufacturer>CJ제일제당</manufacturer>
+      <expiryDate>20251117</expiryDate>
+      <price>4500</price>
+      <quantity>20</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/spamrice.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>023</id>
+      <name>한입쏙쏙미트볼</name>
+      <manufacturer>오뚜기</manufacturer>
+      <expiryDate>20250612</expiryDate>
+      <price>2500</price>
+      <quantity>30</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/mitball.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>024</id>
+      <name>숯불구이맛후랑크2</name>
+      <manufacturer>대림선</manufacturer>
+      <expiryDate>20250608</expiryDate>
+      <price>1900</price>
+      <quantity>130</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/derim_frank.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>025</id>
+      <name>참치마요 삼각김밥</name>
+      <manufacturer>푸드렐라</manufacturer>
+      <expiryDate>20241213</expiryDate>
+      <price>1000</price>
+      <quantity>5</quantity>
+      <remarks>유통기한 임박</remarks>
+      <image src="images/tunamayo_trianglekim.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>026</id>
+      <name>스펨마요김밥</name>
+      <manufacturer>CJ제일제당</manufacturer>
+      <expiryDate>20241125</expiryDate>
+      <price>3500</price>
+      <quantity>4</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/spemmayo_kim.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>027</id>
+      <name>매콤닭강정</name>
+      <manufacturer>하림</manufacturer>
+      <expiryDate>20250105</expiryDate>
+      <price>6000</price>
+      <quantity>20</quantity>
+      <remarks>할인중</remarks>
+      <image src="images/harim_spicy_sauce_chicken.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>028</id>
+      <name>자이언트 떡볶이</name>
+      <manufacturer>BGF리테일</manufacturer>
+      <expiryDate>20250110</expiryDate>
+      <price>2200</price>
+      <quantity>5</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/Giant_Tteokbokki.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>029</id>
+      <name>오뎅한그릇</name>
+      <manufacturer>CJ제일제당</manufacturer>
+      <expiryDate>20250210</expiryDate>
+      <price>3000</price>
+      <quantity>10</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/fishcake_soup.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>030</id>
+      <name>옛날 진한쇠고기 미역국밥</name>
+      <manufacturer>오뚜기</manufacturer>
+      <expiryDate>20250401</expiryDate>
+      <price>4800</price>
+      <quantity>50</quantity>
+      <remarks>1+1</remarks>
+      <image src="images/oddugi_seaweed_soup.jpg" width="100" height="100" />
+    </item>
+  </category>
+  <!-- 라면 카테고리 -->
+  <category id="4" name="라면">
+    <item>
+      <id>031</id>
+      <name>육개장 사발면</name>
+      <manufacturer>농심</manufacturer>
+      <expiryDate>20250830</expiryDate>
+      <price>1000</price>
+      <quantity>150</quantity>
+      <remarks />
+      <image src="images/spicybeefsoup_ramyeon.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>032</id>
+      <name>김치 사발면</name>
+      <manufacturer>농심</manufacturer>
+      <expiryDate>20250505</expiryDate>
+      <price>1000</price>
+      <quantity>120</quantity>
+      <remarks />
+      <image src="images/kimchi_ramyeon.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>033</id>
+      <name>불닭볶음면(큰컵)</name>
+      <manufacturer>농심</manufacturer>
+      <expiryDate>20241210</expiryDate>
+      <price>1500</price>
+      <quantity>100</quantity>
+      <remarks />
+      <image src="images/fire_noodle.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>034</id>
+      <name>왕뚜껑</name>
+      <manufacturer>팔도</manufacturer>
+      <expiryDate>20250620</expiryDate>
+      <price>1500</price>
+      <quantity>200</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/king_ramyeon.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>035</id>
+      <name>참깨라면</name>
+      <manufacturer>오뚜기</manufacturer>
+      <expiryDate>20250212</expiryDate>
+      <price>1700</price>
+      <quantity>180</quantity>
+      <remarks>1+1</remarks>
+      <image src="images/sesameoil_ramyeon.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>036</id>
+      <name>짜파게티</name>
+      <manufacturer>농심</manufacturer>
+      <expiryDate>20250210</expiryDate>
+      <price>1400</price>
+      <quantity>160</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/jjapagetti.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>037</id>
+      <name>신라면블랙(두부김치)</name>
+      <manufacturer>농심</manufacturer>
+      <expiryDate>20250315</expiryDate>
+      <price>1800</price>
+      <quantity>150</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/shinramyeonblack_tufukimchi.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>038</id>
+      <name>진라면(매운맛)</name>
+      <manufacturer>오뚜기</manufacturer>
+      <expiryDate>20250401</expiryDate>
+      <price>1300</price>
+      <quantity>150</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/jinramen_spicy.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>039</id>
+      <name>비빔면</name>
+      <manufacturer>팔도</manufacturer>
+      <expiryDate>20250601</expiryDate>
+      <price>1400</price>
+      <quantity>170</quantity>
+      <remarks />
+      <image src="images/bibimmyeon.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>040</id>
+      <name>짜파구리</name>
+      <manufacturer>오뚜기</manufacturer>
+      <expiryDate>20250315</expiryDate>
+      <price>1600</price>
+      <quantity>90</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/jjapaguri.jpg" width="100" height="100" />
+    </item>
+  </category>
+  <!-- 스낵 카테고리 -->
+  <category id="5" name="스낵">
+    <item>
+      <id>041</id>
+      <name>가나밀크초콜릿</name>
+      <manufacturer>롯데</manufacturer>
+      <expiryDate>20250320</expiryDate>
+      <price>2000</price>
+      <quantity>30</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/gana_chocolate.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>042</id>
+      <name>스윙칩</name>
+      <manufacturer>오리온</manufacturer>
+      <expiryDate>20251117</expiryDate>
+      <price>1700</price>
+      <quantity>80</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/swing_chips.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>043</id>
+      <name>빼뺴로(아몬드)</name>
+      <manufacturer>롯데</manufacturer>
+      <expiryDate>20251017</expiryDate>
+      <price>1700</price>
+      <quantity>200</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/bbebbero.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>044</id>
+      <name>콘초</name>
+      <manufacturer>크라운</manufacturer>
+      <expiryDate>20250819</expiryDate>
+      <price>1500</price>
+      <quantity>80</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/concho.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>045</id>
+      <name>프링글스(사워크림)</name>
+      <manufacturer>켈라노바</manufacturer>
+      <expiryDate>20251230</expiryDate>
+      <price>3700</price>
+      <quantity>100</quantity>
+      <remarks>1+1</remarks>
+      <image src="images/pringles.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>046</id>
+      <name>콘칩</name>
+      <manufacturer>크라운</manufacturer>
+      <expiryDate>20250917</expiryDate>
+      <price>1500</price>
+      <quantity>97</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/con_chips.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>047</id>
+      <name>포카칩</name>
+      <manufacturer>오리온</manufacturer>
+      <expiryDate>20250717</expiryDate>
+      <price>1700</price>
+      <quantity>80</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/poca_chips.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>048</id>
+      <name>치토스(매콤달콤)</name>
+      <manufacturer>롯데</manufacturer>
+      <expiryDate>20250930</expiryDate>
+      <price>1500</price>
+      <quantity>120</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/cheetos.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>049</id>
+      <name>오징어땅콩</name>
+      <manufacturer>해태</manufacturer>
+      <expiryDate>20250715</expiryDate>
+      <price>1500</price>
+      <quantity>150</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/squid_peanut.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>050</id>
+      <name>허니버터칩</name>
+      <manufacturer>해태</manufacturer>
+      <expiryDate>20251125</expiryDate>
+      <price>1800</price>
+      <quantity>200</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/honeybutter.jpg" width="100" height="100" />
+    </item>
+  </category>
+  <!-- 음료 카테고리 -->
+  <category id="6" name="음료">
+    <item>
+      <id>051</id>
+      <name>코카콜라(오리지널)</name>
+      <manufacturer>코카콜라</manufacturer>
+      <expiryDate>20251130</expiryDate>
+      <price>1600</price>
+      <quantity>100</quantity>
+      <remarks>1+1</remarks>
+      <image src="images/coke.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>052</id>
+      <name>칠성사이다</name>
+      <manufacturer>롯데칠성</manufacturer>
+      <expiryDate>20251110</expiryDate>
+      <price>1500</price>
+      <quantity>120</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/chilsung_cider.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>053</id>
+      <name>펩시(제로라임)355ml</name>
+      <manufacturer>롯데칠성</manufacturer>
+      <expiryDate>20250820</expiryDate>
+      <price>1900</price>
+      <quantity>150</quantity>
+      <remarks>1+1</remarks>
+      <image src="images/pepsi_zero.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>054</id>
+      <name>보성홍차아이스티(복숭아)</name>
+      <manufacturer>동원</manufacturer>
+      <expiryDate>20250401</expiryDate>
+      <price>2200</price>
+      <quantity>130</quantity>
+      <remarks>1+1</remarks>
+      <image src="images/Boseong_BlackTea(Peach).jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>055</id>
+      <name>보성말차</name>
+      <manufacturer>동원</manufacturer>
+      <expiryDate>20251111</expiryDate>
+      <price>1000</price>
+      <quantity>132</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/Boseong_greentea.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>056</id>
+      <name>A'live</name>
+      <manufacturer>덴마크</manufacturer>
+      <expiryDate>20250410</expiryDate>
+      <price>2500</price>
+      <quantity>150</quantity>
+      <remarks>1+1</remarks>
+      <image src="images/alive_mango.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>057</id>
+      <name>티즐(피치우롱티)</name>
+      <manufacturer>웅진</manufacturer>
+      <expiryDate>20250601</expiryDate>
+      <price>2000</price>
+      <quantity>200</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/teazle_peach.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>058</id>
+      <name>밀키스</name>
+      <manufacturer>롯데칠성</manufacturer>
+      <expiryDate>20250614</expiryDate>
+      <price>1500</price>
+      <quantity>180</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/milkis.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>059</id>
+      <name>환타(오렌지)</name>
+      <manufacturer>코카콜라</manufacturer>
+      <expiryDate>20250625</expiryDate>
+      <price>1600</price>
+      <quantity>110</quantity>
+      <remarks>2+1</remarks>
+      <image src="images/fanta_orange.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>060</id>
+      <name>파워에이드</name>
+      <manufacturer>코카콜라</manufacturer>
+      <expiryDate>20251210</expiryDate>
+      <price>2200</price>
+      <quantity>120</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/powerade.jpg" width="100" height="100" />
+    </item>
+  </category>
+  <!-- 아이스크림 카테고리 -->
+  <category id="7" name="아이스크림">
+    <item>
+      <id>061</id>
+      <name>부라보콘</name>
+      <manufacturer>해태제과</manufacturer>
+      <expiryDate>20250630</expiryDate>
+      <price>2000</price>
+      <quantity>20</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/burabocorn.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>062</id>
+      <name>월드콘</name>
+      <manufacturer>롯데</manufacturer>
+      <expiryDate>20250715</expiryDate>
+      <price>2000</price>
+      <quantity>22</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/worldcone.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>063</id>
+      <name>돼지바</name>
+      <manufacturer>롯데</manufacturer>
+      <expiryDate>20250405</expiryDate>
+      <price>1500</price>
+      <quantity>50</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/pigbar.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>064</id>
+      <name>메로나</name>
+      <manufacturer>빙그레</manufacturer>
+      <expiryDate>20250610</expiryDate>
+      <price>1500</price>
+      <quantity>40</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/merona.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>065</id>
+      <name>비비빅</name>
+      <manufacturer>롯데</manufacturer>
+      <expiryDate>20250930</expiryDate>
+      <price>1500</price>
+      <quantity>30</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/bibibik.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>066</id>
+      <name>투게더</name>
+      <manufacturer>빙그레</manufacturer>
+      <expiryDate>20250815</expiryDate>
+      <price>7000</price>
+      <quantity>10</quantity>
+      <remarks>할인중</remarks>
+      <image src="images/together.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>067</id>
+      <name>쌍쌍바</name>
+      <manufacturer>롯데</manufacturer>
+      <expiryDate>20251010</expiryDate>
+      <price>1500</price>
+      <quantity>60</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/ssangssangba.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>068</id>
+      <name>티코</name>
+      <manufacturer>롯데</manufacturer>
+      <expiryDate>20251130</expiryDate>
+      <price>5500</price>
+      <quantity>10</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/tico.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>069</id>
+      <name>엑설런트</name>
+      <manufacturer>빙그레</manufacturer>
+      <expiryDate>20251201</expiryDate>
+      <price>9000</price>
+      <quantity>15</quantity>
+      <remarks>할인중</remarks>
+      <image src="images/excellent.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>070</id>
+      <name>빠삐코</name>
+      <manufacturer>롯데</manufacturer>
+      <expiryDate>20250701</expiryDate>
+      <price>1800</price>
+      <quantity>70</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/bbabbico.jpg" width="100" height="100" />
+    </item>
+  </category>
+  <!-- 일회용품 카테고리 -->
+  <category id="8" name="일회용품">
+    <item>
+      <id>071</id>
+      <name>친환경종이컵10P</name>
+      <manufacturer>HEYROO</manufacturer>
+      <expiryDate>-</expiryDate>
+      <price>700</price>
+      <quantity>100</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/paper_cup.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>072</id>
+      <name>일회용 나무젓가락</name>
+      <manufacturer>크린랲</manufacturer>
+      <expiryDate>-</expiryDate>
+      <price>1200</price>
+      <quantity>30</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/disposable_chopsticks.jpeg" width="100" height="100" />
+    </item>
+    <item>
+      <id>073</id>
+      <name>친환경종이소주컵10P</name>
+      <manufacturer>HEYROO</manufacturer>
+      <expiryDate>-</expiryDate>
+      <price>400</price>
+      <quantity>100</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/paper_sojucup.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>074</id>
+      <name>일회용수저</name>
+      <manufacturer>크린랲</manufacturer>
+      <expiryDate>-</expiryDate>
+      <price>1000</price>
+      <quantity>20</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/disposable_spoon.jpg" width="100" height="100" />
+    </item>
+    <item>
+      <id>075</id>
+      <name>친환경종이접시10P</name>
+      <manufacturer>HEYROO</manufacturer>
+      <expiryDate>-</expiryDate>
+      <price>2500</price>
+      <quantity>33</quantity>
+      <remarks>
+      </remarks>
+      <image src="images/disposable_plate.jpg" width="100" height="100" />
+    </item>
+  </category>
+</inventory>
