@@ -85,10 +85,14 @@ This project is a **convenience store inventory management system** developed to
 
 ### XSD 스키마
 - 각 XML 요소 구조를 정의하고 필수 속성과 데이터 타입을 명시
-<img src="/img/1.png"/>
+  
+<img src="/img/1.png" height="500"/>
+
 ---
 
 ## 5. XSLT 템플릿 설명
+
+<img src="/img/2.png"/>
 
 ### 공통 사항
 
@@ -104,22 +108,40 @@ This project is a **convenience store inventory management system** developed to
 - 상품 ID 기준 **오름차순 정렬**
 - 출력 항목: ID, 이름, 카테고리, 가격, 수량, 입고일, 유통기한, 상태, 비고, 이미지
 
+  <img src="/img/3.png"/>
+
 ### 템플릿 2: 카테고리별 상품 출력
 
 - 상품을 카테고리별로 그룹화 및 정렬
 - 각 버튼 클릭 시 해당 카테고리 템플릿 호출
 - 하이퍼링크 사용: `categoryIndex() + position()` → `category-1`, `category-2` 형식
 
+  <img src="/img/4.png"/>
+
+  <img src="/img/5.png"/>
+
 ### 템플릿 3: 할인 상품 목록 출력
 
 - `remarks`가 할인중, 1+1, 2+1인 상품 필터링
 - 할인 가격 계산 후 표시
 
+<img src="/img/6.png"/>
+
+
 ```xslt
 <xsl:for-each select="inventory/item[remarks='할인중']">
+```
+<img src="/img/7.png"/>
+
+```xslt
 <xsl:for-each select="inventory/item[remarks='1+1']">
+```
+<img src="/img/8.png"/>
+
+```xslt
 <xsl:for-each select="inventory/item[remarks='2+1']">
 ```
+<img src="/img/9.png"/>
 
 ### 템플릿 4: 유통기한 임박 상품 출력
 
@@ -149,6 +171,8 @@ This project is a **convenience store inventory management system** developed to
 </xsl:if>
 ```
 #### 출력 형태
+
+<img src="/img/10.png"/>
 
 - 테이블 상단에 **현재 날짜와 템플릿 제목** 출력
 - 상품별 항목:
