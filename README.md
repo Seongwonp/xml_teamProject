@@ -85,7 +85,7 @@ This project is a **convenience store inventory management system** developed to
 
 ### XSD 스키마
 - 각 XML 요소 구조를 정의하고 필수 속성과 데이터 타입을 명시
-
+<img src="/img/1.png"/>
 ---
 
 ## 5. XSLT 템플릿 설명
