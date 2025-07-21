@@ -36,8 +36,8 @@ This project is a **convenience store inventory management system** developed to
 ---
 
 # 편의점 재고관리 프로그램
-
-21113420 박성원 | 21113370 류동영
+Daegu Catholic University
+박성원 | 류동영
 
 ## 1. 프로젝트 개요
 
